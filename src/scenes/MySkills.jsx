@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 const MySkills = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
-    <section id="skills" className="pt-10 pb-24">
+    <section id="skills" className="pt-8 pb-15">
       {/* HEADER AND IMAGE SECTION */}
-      <div className="md:flex md:justify-between md:gap-16 mt-32">
+      <div className="md:flex md:justify-between md:gap-15  ">
         <motion.div
           className="md:w-1/3"
           initial="hidden"
@@ -23,9 +23,10 @@ const MySkills = () => {
             MY <span className="text-red">SKILLS</span>
           </p>
           <LineGradient width="w-1/3" />
-          <p className="mt-10 mb-7">
-            Fulstack Developer with MERN,Python,Graphql,Mysql,Postgresql
-          </p>
+          <p className="mt-7 mb-5">
+          Full-stack Developer with expertise in MERN (MongoDB, Express, React, Node.js) 
+          stack, Python, GraphQL, MySQL, PostgreSQL, and other frameworks.
+        </p>
         </motion.div>
 
         {/* <div className="mt-16 md:mt-0">
@@ -47,7 +48,7 @@ const MySkills = () => {
       </div>
 
       {/* SKILLS */}
-      <div className="md:flex md:justify-between mt-16 gap-32">
+      <div className="md:flex md:justify-between mt-15 gap-30">
         {/* EXPERIENCE */}
         <motion.div
           className="md:w-1/3 mt-10"
@@ -69,11 +70,13 @@ const MySkills = () => {
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-amber-500 absolute right-0 top-0 z-[-1]" />
           </div>
-          <p className="mt-5">
-          I have experience designing and developing fullstack MERN applications, utilizing technologies such as MongoDB, Express, React, and Node.js.
-          Nextjs,Graphql,Postgresql,Msql,Vuejs
-          </p>
-        </motion.div>
+          <p className="mt-10 mb-7 text-sm text-start">
+            Experienced in designing and developing full-stack MERN applications using:
+            MongoDB, Express, React, Node.js,
+            Next.js, GraphQL, PostgreSQL, MySQL, Vue.js,
+            and more.
+      </p>
+      </motion.div>
 
         {/* INNOVATIVE */}
         <motion.div
