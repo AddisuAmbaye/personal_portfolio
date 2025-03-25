@@ -24,7 +24,7 @@ const MySkills = () => {
           </p>
           <LineGradient width="w-1/3" />
           <p className="mt-7 mb-5">
-          Full-stack Developer with expertise in MERN (MongoDB, Express, React, Node.js) 
+          Backend Developer with expertise in MERN (MongoDB, Express, React, Node.js) 
           stack, Python, GraphQL, MySQL, PostgreSQL, and other frameworks.
         </p>
         </motion.div>
