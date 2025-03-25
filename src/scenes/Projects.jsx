@@ -57,7 +57,7 @@ const UpworkProfile = () => {
         
         <div className="mt-4 grid grid-cols-2 gap-2 w-full">
           <div className="bg-light-grey p-2 rounded">
-            <p className="font-bold text-deep-blue">50+</p>
+            <p className="font-bold text-deep-blue">8+</p>
             <p className="text-xs">Clients</p>
           </div>
           <div className="bg-light-grey p-2 rounded">
