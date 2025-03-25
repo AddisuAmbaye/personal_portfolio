@@ -39,16 +39,9 @@ const UpworkProfile = () => {
   return (
     <motion.div 
       variants={projectVariant}
-      className="relative bg-white p-8 rounded-lg shadow-xl max-w-[400px] max-h-[400px] overflow-hidden border-2 border-gold"
+      className="relative bg-white p-8 rounded-lg shadow-xl max-w-[400px] max-h-[400px] overflow-hidden mt-10 border-2 border-gold"
     >
       <div className="flex flex-col items-center text-center">
-        <div className="w-20 h-20 mb-4 rounded-full bg-blue overflow-hidden border-2 border-gold">
-          <img 
-            src="../assets/upwork-profile.png" 
-            alt="Upwork Profile" 
-            className="w-full h-full object-cover"
-          />
-        </div>
         <h3 className="text-2xl font-playfair font-semibold text-deep-blue">Upwork Profile</h3>
         <p className="text-sm text-gray-600 mt-2">Top Rated Full Stack Developer</p>
         
@@ -143,12 +136,7 @@ const Projects = () => {
             link={'https://github.com/AddisuAmbaye/lookup-social-media'} 
           />
 
-          {/* ROW 2 */}
-          <Project 
-            title="Project 4" 
-            body={'Another impressive project showcasing my skills'} 
-            link={'#'} 
-          />
+          <div className="mt-2"></div>
           <UpworkProfile />
           <div
             className="flex justify-center text-center items-center p-10 bg-blue
