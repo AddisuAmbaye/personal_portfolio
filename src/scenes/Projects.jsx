@@ -15,23 +15,74 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title,body,link }) => {
+const Project = ({ title, body, link }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
 
   return (
-    <a href={link}>
-    <motion.div variants={projectVariant} className="relative">
-      <div className={overlayStyles}>
-        <p className="text-2xl font-playfair">{title}</p>
-        <p className="mt-7">
-          {body}
-        </p>
-      </div>
-      <img src={`../assets/${projectTitle}.png`} alt={projectTitle} />
-    </motion.div>
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      <motion.div variants={projectVariant} className="relative">
+        <div className={overlayStyles}>
+          <p className="text-2xl font-playfair">{title}</p>
+          <p className="mt-7">
+            {body}
+          </p>
+        </div>
+        <img src={`../assets/${projectTitle}.png`} alt={projectTitle} />
+      </motion.div>
     </a>
+  );
+};
+
+const UpworkProfile = () => {
+  return (
+    <motion.div 
+      variants={projectVariant}
+      className="relative bg-white p-8 rounded-lg shadow-xl max-w-[400px] max-h-[400px] overflow-hidden border-2 border-gold"
+    >
+      <div className="flex flex-col items-center text-center">
+        <div className="w-20 h-20 mb-4 rounded-full bg-blue overflow-hidden border-2 border-gold">
+          <img 
+            src="../assets/upwork-profile.png" 
+            alt="Upwork Profile" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <h3 className="text-2xl font-playfair font-semibold text-deep-blue">Upwork Profile</h3>
+        <p className="text-sm text-gray-600 mt-2">Top Rated Full Stack Developer</p>
+        
+        <div className="mt-4 w-full">
+          <div className="flex justify-between text-xs text-gray-500">
+            <span>Job Success</span>
+            <span>100%</span>
+          </div>
+          <div className="w-full bg-gray-200 rounded-full h-2 mt-1">
+            <div className="bg-green-500 h-2 rounded-full" style={{width: '100%'}}></div>
+          </div>
+        </div>
+        
+        <div className="mt-4 grid grid-cols-2 gap-2 w-full">
+          <div className="bg-light-grey p-2 rounded">
+            <p className="font-bold text-deep-blue">50+</p>
+            <p className="text-xs">Clients</p>
+          </div>
+          <div className="bg-light-grey p-2 rounded">
+            <p className="font-bold text-deep-blue">5.0</p>
+            <p className="text-xs">Rating</p>
+          </div>
+        </div>
+        
+        <a 
+          href="https://www.upwork.com/freelancers/~019cd121aea196ef4c" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="mt-6 px-6 py-2 bg-gold text-white rounded-full font-semibold hover:bg-dark-gold transition duration-300"
+        >
+          View Profile
+        </a>
+      </div>
+    </motion.div>
   );
 };
 
@@ -76,17 +127,29 @@ const Projects = () => {
           >
             BEAUTIFUL USER INTERFACES
           </div>
-          <Project title="Project 1" body={'web app to provide information and set appointment to patients.'} 
-          link={'https://github.com/AddisuAmbaye/Meet-My-Doctor'} />
-           <Project title="Project 2" body={'college application website for ethiopians '} 
-           link={'https://github.com/TsehaynehGetaneh/JointApplication'} />
-          <Project title="Project 3" body={' Lookup, the Social Media for Sociopaths!'} 
-          link={'https://github.com/AddisuAmbaye/lookup-social-media'} />
+          <Project 
+            title="Project 1" 
+            body={'web app to provide information and set appointment to patients.'} 
+            link={'https://github.com/AddisuAmbaye/Meet-My-Doctor'} 
+          />
+          <Project 
+            title="Project 2" 
+            body={'college application website for ethiopians'} 
+            link={'https://github.com/TsehaynehGetaneh/JointApplication'} 
+          />
+          <Project 
+            title="Project 3" 
+            body={'Lookup, the Social Media for Sociopaths!'} 
+            link={'https://github.com/AddisuAmbaye/lookup-social-media'} 
+          />
 
           {/* ROW 2 */}
-          {/* <Project title="Project 4" />
-          <Project title="Project 5" />  */}
-
+          <Project 
+            title="Project 4" 
+            body={'Another impressive project showcasing my skills'} 
+            link={'#'} 
+          />
+          <UpworkProfile />
           <div
             className="flex justify-center text-center items-center p-10 bg-blue
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
